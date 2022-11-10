@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import GraticuleVue from "./Gallarys/Graticule.vue";
+import DiffussionPointVue from "./Gallarys/DiffussionPoint.vue";
 </script>
 <template>
   <div class="controll-section">
     <GraticuleVue />
+    <DiffussionPointVue />
   </div>
 </template>
 
