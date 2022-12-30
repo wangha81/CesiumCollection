@@ -20,6 +20,7 @@ export const create = async (container: HTMLElement): Promise<CesiumWidget> => {
   widget.scene.globe.baseColor = Color.GREY;
   widget.scene.globe.showGroundAtmosphere = false;
   widget.scene.globe.enableLighting = false;
+  widget.scene.globe.depthTestAgainstTerrain = true;
   widget.camera.setView({
     destination: Rectangle.fromDegrees(-30, -30, 30, 30),
   });
