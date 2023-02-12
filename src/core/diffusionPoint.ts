@@ -36,7 +36,7 @@ class DiffusionMaterial extends Cesium.Material {
       fabric: {
         type: MaterialType,
         uniforms: {
-          color: Cesium.Color.fromCssColorString("#DB4D6D"),
+          color: Cesium.Color.fromCssColorString("#FBD266"),
         },
         source: `
         czm_material czm_getMaterial(czm_materialInput materialInput)
