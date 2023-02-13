@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import CesiumButtonVue from "../CesiumButton.vue";
 import { getWidget } from "../../map";
-import { Line } from "../../core/flowLine";
+import { Line } from "../../core/flowLinePrimitive";
 let show = false;
 let line: Line;
 
@@ -14,7 +14,7 @@ const trigger = () => {
   if (!line)
     line = primitives.add(
       new Line({
-        positions: [0, 0, 0, 60],
+        positions: [-2, 0, -2, 60],
       })
     );
   line.show = show;
@@ -22,5 +22,5 @@ const trigger = () => {
 };
 </script>
 <template>
-  <CesiumButtonVue @click="trigger">FlowLine</CesiumButtonVue>
+  <CesiumButtonVue @click="trigger">FlowLine(P)</CesiumButtonVue>
 </template>
