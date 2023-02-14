@@ -19,7 +19,7 @@ export const create = async (container: HTMLElement): Promise<CesiumWidget> => {
     imageryProvider,
     creditContainer: document.createElement("div"),
   });
-  const {scene, camera} = widget;
+  const {scene, camera, clock} = widget;
   // post default config
   scene.globe.baseColor = Color.GREY;
   scene.globe.showGroundAtmosphere = false;
@@ -38,6 +38,9 @@ export const create = async (container: HTMLElement): Promise<CesiumWidget> => {
 
   _WIDGET = widget;
   _DataSourceDisplay = dataSourceDisplay;
+  clock.onTick.addEventListener(() => {
+    dataSourceDisplay.update(clock.currentTime);
+  });
   return widget;
 };
 
