@@ -1,12 +1,15 @@
 import {
   buildModuleUrl,
-  Cartesian3,
   CesiumWidget,
   Color,
   Rectangle,
   TileMapServiceImageryProvider,
+  DataSourceDisplay,
+  DataSourceCollection,
+  EntityCollection
 } from "cesium";
-let WIDGET: CesiumWidget;
+let _WIDGET: CesiumWidget;
+let _DataSourceDisplay: DataSourceDisplay;
 
 export const create = async (container: HTMLElement): Promise<CesiumWidget> => {
   const imageryProvider = new TileMapServiceImageryProvider({
@@ -16,19 +19,34 @@ export const create = async (container: HTMLElement): Promise<CesiumWidget> => {
     imageryProvider,
     creditContainer: document.createElement("div"),
   });
+  const {scene, camera} = widget;
   // post default config
-  widget.scene.globe.baseColor = Color.GREY;
-  widget.scene.globe.showGroundAtmosphere = false;
-  widget.scene.globe.enableLighting = false;
-  widget.scene.globe.depthTestAgainstTerrain = true;
-  widget.camera.setView({
+  scene.globe.baseColor = Color.GREY;
+  scene.globe.showGroundAtmosphere = false;
+  scene.globe.enableLighting = false;
+  scene.globe.depthTestAgainstTerrain = true;
+  camera.setView({
     destination: Rectangle.fromDegrees(-30, -30, 30, 30),
   });
-  WIDGET = widget;
+
+  // Datasources for entities
+  const dataSourceCollection = new DataSourceCollection();
+  const dataSourceDisplay = new DataSourceDisplay({
+    scene: scene,
+    dataSourceCollection: dataSourceCollection
+  });
+
+  _WIDGET = widget;
+  _DataSourceDisplay = dataSourceDisplay;
   return widget;
 };
 
 export const getWidget = (): CesiumWidget => {
-  if (!WIDGET) throw "CesiumWidget not init";
-  return WIDGET;
+  if (!_WIDGET) throw "CesiumWidget not init";
+  return _WIDGET;
+};
+
+export const getDefaultEntityCollection = (name?: string): EntityCollection => {
+  if (!_DataSourceDisplay) throw "DataSourceDisplay not init";
+  return _DataSourceDisplay.defaultDataSource.entities;
 };
