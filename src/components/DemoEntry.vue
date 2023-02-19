@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import GraticuleVue from "./Gallarys/Graticule.vue";
 import DiffussionPointVue from "./Gallarys/DiffussionPoint.vue";
-import DiffussionNtouPointVue from "./Gallarys/DiffussionNtouPointVue.vue";
 import FlowLineVue from "./Gallarys/FlowLine.vue";
 import CommandVue from "./Gallarys/Command.vue";
+import car from "./Gallarys/car.vue"
 </script>
 <template>
   <div class="controll-section">
     <GraticuleVue />
     <DiffussionPointVue />
-    <DiffussionNtouPointVue />
     <FlowLineVue />
     <CommandVue />
+    <car/>
   </div>
 </template>
 
