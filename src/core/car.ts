@@ -15,17 +15,18 @@ import * as Cesium from "cesium";
     constructor() {
       const add: Cesium.Entity.ConstructorOptions  = {
         position : Cesium.Cartesian3.fromDegrees(0, 0),
-        point:{
-          pixelSize : 5,
+        // point:{
+        //   pixelSize : 5,
         
-          color : Cesium.Color.RED,
-          outlineColor : Cesium.Color.WHITE,
-          outlineWidth : 2
-        }
+        //   color : Cesium.Color.RED,
+        //   outlineColor : Cesium.Color.WHITE,
+        //   outlineWidth : 2
+        // }
       
-        // model : {
-        //     uri : 'node_modules/SampleData/models/GroundVehicle/GroundVehicle.glb'
-        //  },
+        model : {
+            uri : new URL ('../assets/ToyCar.glb',import .meta.url).href,
+            scale: 10000000,
+         },
         
         };
          super(add);
