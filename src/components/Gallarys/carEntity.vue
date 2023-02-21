@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import CesiumButtonVue from "../CesiumButton.vue";
 //import { getWidget } from "../../map";
-import { car } from "../../core/car";
+import { car } from "../../core/carEntity";
 import {  getDefaultEntityCollection } from "../../map";
 let show = false;
 let Car: car;
