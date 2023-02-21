@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import GraticuleVue from "./Gallarys/Graticule.vue";
 import DiffussionPointVue from "./Gallarys/DiffussionPoint.vue";
-import FlowLineVue from "./Gallarys/FlowLine.vue";
+import FlowLinePrimitiveVue from "./Gallarys/FlowLinePrimitive.vue";
+import FlowLineEntityVue from "./Gallarys/FlowLineEntity.vue";
 import CommandVue from "./Gallarys/Command.vue";
 import car from "./Gallarys/carEntity.vue"
 </script>
@@ -9,7 +10,8 @@ import car from "./Gallarys/carEntity.vue"
   <div class="controll-section">
     <GraticuleVue />
     <DiffussionPointVue />
-    <FlowLineVue />
+    <FlowLinePrimitiveVue />
+    <FlowLineEntityVue />
     <CommandVue />
     <car/>
   </div>
