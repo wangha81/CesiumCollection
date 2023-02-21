@@ -3,7 +3,7 @@ import GraticuleVue from "./Gallarys/Graticule.vue";
 import DiffussionPointVue from "./Gallarys/DiffussionPoint.vue";
 import FlowLineVue from "./Gallarys/FlowLine.vue";
 import CommandVue from "./Gallarys/Command.vue";
-import car from "./Gallarys/car.vue"
+import car from "./Gallarys/carEntity.vue"
 </script>
 <template>
   <div class="controll-section">
