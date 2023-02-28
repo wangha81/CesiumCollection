@@ -20,7 +20,7 @@ onMounted(async () => {
 @import "cesium/Build/Cesium/Widgets/widgets.css";
 .cesium-conatiner {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
   overflow: hidden;
