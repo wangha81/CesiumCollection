@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import CesiumButtonVue from "../CesiumButton.vue";
-//import { getWidget } from "../../map";
-import { car } from "../../core/carEntity";
-import {  getDefaultEntityCollection } from "../../map";
+import { getWidget } from "../../map";
+import { Car } from "../../core/carEntity";
 let show = false;
-let Car: car;
-//var entity = getDefaultEntityCollection()
+let car: Car;
 
-const trigger = () => {
+const trigger = async () => {
   show = !show;
-  const entities = getDefaultEntityCollection();
-  if (!Car) Car= entities.add(new car());
-  Car.show = show;
-  console.log(Car)
+  const widget = getWidget();
+  const { entities } = widget;
+  car ??= entities.add(new Car());
+  car.show = show;
+  await widget.updateDefaultDisplay();
+  console.log(car)
 };
 </script>
 <template>

@@ -4,7 +4,7 @@ import DiffussionPointVue from "./Gallarys/DiffussionPoint.vue";
 import FlowLinePrimitiveVue from "./Gallarys/FlowLinePrimitive.vue";
 import FlowLineEntityVue from "./Gallarys/FlowLineEntity.vue";
 import CommandVue from "./Gallarys/Command.vue";
-import car from "./Gallarys/carEntity.vue"
+import CarEntityVue from "./Gallarys/CarEntity.vue"
 </script>
 <template>
   <div class="controll-section">
@@ -13,7 +13,7 @@ import car from "./Gallarys/carEntity.vue"
     <FlowLinePrimitiveVue />
     <FlowLineEntityVue />
     <CommandVue />
-    <car/>
+    <CarEntityVue/>
   </div>
 </template>
 

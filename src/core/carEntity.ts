@@ -1,6 +1,4 @@
-import * as Cesium from "cesium";
-//import {  getDefaultEntityCollection } from "..//map";
-
+import { Cartesian3, Entity } from "cesium";
 
 //var entity = getDefaultEntityCollection()
 //entity.add({
@@ -11,15 +9,15 @@ import * as Cesium from "cesium";
  // })
   //viewer.trackedEntity = entity; // 追踪
 
-  export class car extends Cesium.Entity  {
+  export class Car extends Entity  {
     constructor() {
-      const add: Cesium.Entity.ConstructorOptions  = {
-        position : Cesium.Cartesian3.fromDegrees(0, 0),
+      const add: Entity.ConstructorOptions  = {
+        position : Cartesian3.fromDegrees(0, 0),
         // point:{
         //   pixelSize : 5,
         
-        //   color : Cesium.Color.RED,
-        //   outlineColor : Cesium.Color.WHITE,
+        //   color : Color.RED,
+        //   outlineColor : Color.WHITE,
         //   outlineWidth : 2
         // }
       
