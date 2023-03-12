@@ -5,6 +5,7 @@ import FlowLinePrimitiveVue from "./Gallarys/FlowLinePrimitive.vue";
 import FlowLineEntityVue from "./Gallarys/FlowLineEntity.vue";
 import CommandVue from "./Gallarys/Command.vue";
 import CarEntityVue from "./Gallarys/CarEntity.vue"
+import LargePrimitiveVue from "./Gallarys/LargePrimitive.vue"
 </script>
 <template>
   <div class="controll-section">
@@ -14,6 +15,7 @@ import CarEntityVue from "./Gallarys/CarEntity.vue"
     <FlowLineEntityVue />
     <CommandVue />
     <CarEntityVue/>
+    <LargePrimitiveVue />
   </div>
 </template>
 
