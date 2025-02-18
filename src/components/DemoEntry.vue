@@ -6,6 +6,7 @@ import FlowLineEntityVue from "./Gallarys/FlowLineEntity.vue";
 import CommandVue from "./Gallarys/Command.vue";
 import CarEntityVue from "./Gallarys/CarEntity.vue"
 import LargePrimitiveVue from "./Gallarys/LargePrimitive.vue"
+import WavePolygonPrimitiveVue from './Gallarys/WavePolygonPrimitive.vue'
 </script>
 <template>
   <div class="controll-section">
@@ -16,6 +17,7 @@ import LargePrimitiveVue from "./Gallarys/LargePrimitive.vue"
     <CommandVue />
     <CarEntityVue/>
     <LargePrimitiveVue />
+    <WavePolygonPrimitiveVue />
   </div>
 </template>
 
